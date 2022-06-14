@@ -53,55 +53,29 @@ public class HeroNode {
     }
 
     //前序遍历
+    public void preOrder() {
+        System.out.println(this);
+        //递归向左子树前序遍历
+        if (this.left != null) {
+            this.left.preOrder();
+        }
+        //递归向右子树前序遍历
+        if (this.right != null) {
+            this.right.preOrder();
+        }
+    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //中序遍历
+    public void infixOrder() {
+        //递归向左子树前序遍历
+        if (this.left != null) {
+            this.left.infixOrder();
+        }
+        System.out.println(this);
+        //递归向右子树前序遍历
+        if (this.right != null) {
+            this.right.infixOrder();
+        }
+    }
 }
