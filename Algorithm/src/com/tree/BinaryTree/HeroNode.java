@@ -92,4 +92,86 @@ public class HeroNode {
         }
         System.out.println(this);
     }
+
+
+    //前序遍历查找
+    public HeroNode preOderSearch(int no) {
+        //检查当前节点
+        if (this.no == no) {
+            return this;
+        }
+
+        HeroNode resNode = null;
+        if (this.left != null) {
+            resNode = this.left.preOderSearch(no);
+        }
+        if (resNode != null) {  //左子树找到，不浪费直接返回
+            return resNode;
+        }
+
+        //向右子树查找
+        if (this.right != null) {
+            resNode = this.right.preOderSearch(no);
+        }
+        //不管右子树有无结果，终返回一个resNode
+        return resNode;
+    }
+
+
+    //中序遍历查找
+    public HeroNode infixOderSearch(int no) {
+        HeroNode resNode = null;
+        if (this.left != null) {
+            resNode = this.left.infixOderSearch(no);
+        }
+        if (resNode != null) {
+            return resNode;
+        }
+
+        //左子树未查出
+        if (this.no == no) {
+            return this;
+        }
+
+        if (this.right != null) {
+            resNode = this.right.infixOderSearch(no);
+        }
+
+        return resNode;
+
+    }
+
+
+    //后序遍历查找
+    public HeroNode postOderSearch(int no){
+        HeroNode resNode = null;
+        if (this.left != null){
+            resNode = this.left.postOderSearch(no);
+        }
+        if (resNode != null){
+            return resNode;
+        }
+
+        if (this.right != null){
+            resNode = this.right.postOderSearch(no);
+        }
+        if (resNode != null){
+            return resNode;
+        }
+
+        if (this.no == no){
+            return this;
+        }
+            return resNode;
+
+    }
+
+
+
+
+
+
+
+
+
 }

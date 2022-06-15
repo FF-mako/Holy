@@ -8,30 +8,59 @@ public class BinaryTree {
     }
 
     //前序遍历
-    public void preOrder(){
-        if (this.root != null){
+    public void preOrder() {
+        if (this.root != null) {
             this.root.preOrder();
-        }else {
+        } else {
             System.out.println("二叉树为空，无法遍历");
         }
     }
 
     //中序遍历
-    public void infixOrder(){
-        if (this.root != null){
+    public void infixOrder() {
+        if (this.root != null) {
             this.root.infixOrder();
-        }else {
+        } else {
             System.out.println("二叉树为空，无法遍历");
         }
     }
 
     //后序遍历
-    public void postOrder(){
-        if (this.root != null){
+    public void postOrder() {
+        if (this.root != null) {
             this.root.postOrder();
-        }else {
+        } else {
             System.out.println("二叉树为空，无法遍历");
         }
     }
+
+
+    //前序遍历查找
+    public HeroNode preOderSearch(int no) {
+        if (root != null) {
+            return root.preOderSearch(no);
+        } else {
+            return null;
+        }
+    }
+
+    //中序遍历查找
+    public HeroNode infixOderSearch(int no) {
+        if (root != null) {
+            return root.infixOderSearch(no);
+        } else {
+            return null;
+        }
+    }
+
+    //后序遍历查找
+    public HeroNode postOderSearch(int no) {
+        if (root != null) {
+            return root.preOderSearch(no);
+        } else {
+            return null;
+        }
+    }
+
 
 }

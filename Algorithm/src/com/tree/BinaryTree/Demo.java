@@ -31,7 +31,23 @@ public class Demo {
         //后序遍历
         System.out.println("后序遍历");
         binaryTree.postOrder();
+
+
+        //前序遍历查找
+        HeroNode preNode1 = binaryTree.preOderSearch(5);
+        System.out.println("-------------前序遍历查找------------");
+        System.out.println(preNode1);
+
+        //中序遍历查找
+        HeroNode preNode2 = binaryTree.infixOderSearch(5);
+        System.out.println("------------中序遍历查找-------------");
+        System.out.println(preNode2);
+
+        //后序遍历查找
+        HeroNode preNode3 = binaryTree.postOderSearch(5);
+        System.out.println("-----------后序遍历查找--------------");
+        System.out.println(preNode3);
+
+
     }
-
-
 }
