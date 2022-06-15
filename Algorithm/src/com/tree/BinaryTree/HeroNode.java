@@ -78,4 +78,18 @@ public class HeroNode {
             this.right.infixOrder();
         }
     }
+
+
+    //后序遍历
+    public void postOrder() {
+        //递归向左子树前序遍历
+        if (this.left != null) {
+            this.left.postOrder();
+        }
+        //递归向右子树前序遍历
+        if (this.right != null) {
+            this.right.postOrder();
+        }
+        System.out.println(this);
+    }
 }
