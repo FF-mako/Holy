@@ -48,6 +48,16 @@ public class Demo {
         System.out.println("-----------后序遍历查找--------------");
         System.out.println(preNode3);
 
+        //删除
+        binaryTree.delNode(5);
+        System.out.println("后序遍历");
+        binaryTree.postOrder();
+        HeroNode preNode4 = binaryTree.postOderSearch(5);
+        System.out.println("-----------后序遍历查找--------------");
+        System.out.println(preNode4);
+
+
+
 
     }
 }

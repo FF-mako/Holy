@@ -62,5 +62,19 @@ public class BinaryTree {
         }
     }
 
+    //删除
+    public void delNode(int no){
+        if (root != null){
+            if (root.getNo() == no){
+                root = null;
+            }else {
+                //递归删除
+                root.delOrder(no);
+            }
+        }else {
+            System.out.println("空树，不能删除");
+        }
+    }
+
 
 }

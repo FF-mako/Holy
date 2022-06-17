@@ -167,6 +167,33 @@ public class HeroNode {
     }
 
 
+    public void delOrder(int no){
+
+        if (this.left != null && this.left.no == no){
+            this.left = null;
+            return;
+        }
+
+        if (this.right != null && this.right.no == no){
+            this.right = null;
+            return;
+        }
+
+        if (this.left != null){
+            this.left.delOrder(no);
+        }
+
+        if (this.right != null){
+            this.right.delOrder(no);
+        }
+
+
+
+
+
+    }
+
+
 
 
 
